@@ -1,0 +1,13 @@
+{
+    "environment":"dev",
+    "nodeServerPort": 3000,
+    "mongoDbConfiguration": {
+        "username": "timeAdmin",
+        "password": "time",
+        "server": "localhost",
+        "port": "27017",
+        "databaseName": "Time_Management"
+    },
+    "baseURL": "http://localhost:4200/",
+    "secretToken": "catswillruletheworld"
+}

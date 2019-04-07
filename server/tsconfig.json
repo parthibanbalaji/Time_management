@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/server",
+    "baseUrl": "",
+    "allowJs": true,
+    "module": "commonjs",
+    "types" : [ "node" ],
+    "typeRoots": [ "../node_modules/@types" ]
+  }
+}

@@ -1,0 +1,49 @@
+<router-outlet></router-outlet>
+
+
+ <div class="container register-form">  
+
+    <div class="form">
+        <div class="note">
+            <p>Welcome !! Register to continue...</p>
+        </div>
+
+        <div class="form-content">
+            <form [formGroup]="registerForm" >
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" formControlName="email"  placeholder="Email" value=""/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" formControlName="firstName"  placeholder="First Name" value=""/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" formControlName="lastName" placeholder="Last Name" value=""/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" formControlName="password" placeholder="Password" value=""/>
+                        </div>
+                        <div class="alert alert-danger" *ngIf="!password.pristine && !password.valid">
+                                <p> Password should atleast contain eight characters including one uppercase letter, one lowercase
+                                        letter, one special
+                                        character and one numeric character.</p>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" formControlName="confirmPassword" placeholder="Confirm Password *" value=""/>
+                        </div>
+                        <div class="alert alert-danger" *ngIf="passmismatch==true && !confirmPassword.pristine">Password does not
+                                match the confirm password.
+                        </div>
+                        <div class="form-group">
+                             <input type="text" class="form-control" formControlName="phone" placeholder="Phone Number" value=""/>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" [disabled]="!registerForm.valid" (click)="register()" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>  
